@@ -1,5 +1,10 @@
 # Balanced Ternary Neural Networks and ALU Emulator in MATLAB/Octave
 
+<p align="center">
+  <img src="logoGitHub.png" width="300">
+</p>
+
+
 This repository provides a complete MATLAB/Octave framework for experimenting with balanced-ternary computing, including:
 
 1) A balanced ternary ALU emulator with multi-trit operations;

@@ -87,5 +87,14 @@ These computations are followed by argmax classification, which is a standard ap
 - `C`: SVM regularisation parameter (default: 0.1)
 - I note that, currently, there is no direct regularisation (the algorithm is mostly experimental)
 
+**Inference using ternary ALU emulation**
+
+First, the ternarised pre-trained weights are converted from the {-1, 0, +1} format to {T, 0, 1}, to make them readable for a human. See https://en.wikipedia.org/wiki/Balanced_ternary.
+
+Second, dot products are obtained using the customised `bt_matmul` function that multiplies interger numbers in the balanced ternary format {T, 0, 1}. 
+
+Third, a customised function that takes the sign of the ternary numbers is used as the activation function.
+
+Finally, the classification is done using argmax that is implemented using a ternary analogue of the stansard `max` function.
 
 

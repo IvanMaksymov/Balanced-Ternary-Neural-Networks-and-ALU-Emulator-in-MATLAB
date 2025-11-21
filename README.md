@@ -95,6 +95,6 @@ Second, dot products are obtained using the customised `bt_matmul` function that
 
 Third, a customised function that takes the sign of the ternary numbers is used as the activation function.
 
-Finally, the classification is done using argmax that is implemented using a ternary analogue of the stansard `max` function.
+Finally, the classification is done using argmax that is implemented using a ternary analogue of the standard `max` function in Matlab/Octave.
 
 

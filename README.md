@@ -79,10 +79,13 @@ W₂ = W₂ - α × (∂L/∂v₂ × y₁ᵀ)
 W₁ = W₁ - α × (∂L/∂v₁ × xᵀ)
 ```
 
+These computations are followed by argmax classification, which is a standard approach for multi-class SVM without softmax.
+
 ### Parameters
 - `alpha`: Learning rate for gradient descent
 - `tf`: Ternarisation threshold for weights and activations  
 - `C`: SVM regularisation parameter (default: 0.1)
+- I note that, currently, there is no direct regularisation (the algorithm is mostly experimental)
 
 
 

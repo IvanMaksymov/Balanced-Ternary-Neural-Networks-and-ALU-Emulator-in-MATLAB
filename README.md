@@ -17,6 +17,13 @@ This repository provides a complete MATLAB/Octave framework for experimenting wi
 
 This project is for researchers exploring non-binary computing, ternary logic circuits and unconventional neural network arithmetic. It began as a hobby project aimed at developing a deeper understanding of the opportunities offered by ternary neural networks. I intentionally avoided consulting the existing literature to build everything from scratch, hoping to think independently, avoid repeating the assumptions made by others (at least consciously) and perhaps even rediscover or create something genuinely new. As usual, no warranty is provided. You use this code at your own risk.
 
+Tested on `800 x 10` images, the result should look like this (I used Octave 9.4.0):
+
+<p align="center">
+  <img src="Screenshot Octave Accuracy.png" width="300">
+</p>
+
+
 ## File description
 
 1) Ternary_MultiClass_Ternary_Inference_Only.m loads the trained network weights (allvars_ternaryNN_no_bias.h5), converts them into their ternary (balanced trit) form and evaluates the model on N_test = 10 test images (default, maximum 800). In the decimal inference section, matrix multiplications are carried out using standard MATLAB/Octave integer operations, which are naturally fast. In contrast, the ternary inference section performs all computations strictly using ternary arithmetic. This includes trit-wise operations, ternary addition and shift-and-add multiplication through the ternary ALU emulator. As expected, this mode is significantly slower, even though several optimisation tricks are applied to the emulator to reduce overhead.

@@ -20,7 +20,7 @@ This project is for researchers exploring non-binary computing, ternary logic ci
 Tested on `800 x 10` images, the result should look like this (I used Octave 9.4.0):
 
 <p align="center">
-  <img src="Screenshot Octave Accuracy.png" width="300">
+  <img src="Screenshot Octave Accuracy.png" width="500">
 </p>
 
 

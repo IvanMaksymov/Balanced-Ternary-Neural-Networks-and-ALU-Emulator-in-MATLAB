@@ -17,7 +17,7 @@ This repository provides a complete MATLAB/Octave framework for experimenting wi
 
 This project is for researchers exploring non-binary computing, ternary logic circuits and unconventional neural network arithmetic. It began as a hobby project aimed at developing a deeper understanding of the opportunities offered by ternary neural networks. I intentionally avoided consulting the existing literature to build everything from scratch, hoping to think independently, avoid repeating the assumptions made by others (at least consciously) and perhaps even rediscover or create something genuinely new. As usual, no warranty is provided. You use this code at your own risk.
 
-Tested on `800 x 10` images, the result should look like this (I used Octave 9.4.0):
+Tested on `800 x 10` images from the MNIST testing subdataset, the result should look like this (I used Octave 9.4.0):
 
 <p align="center">
   <img src="Screenshot Octave Accuracy.png" width="500">

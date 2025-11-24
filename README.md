@@ -17,6 +17,14 @@ This repository provides a complete MATLAB/Octave framework for experimenting wi
 
 This project is for researchers exploring non-binary computing, ternary logic circuits and unconventional neural network arithmetic. It began as a hobby project aimed at developing a deeper understanding of the opportunities offered by ternary neural networks. I intentionally avoided consulting the existing literature to build everything from scratch, hoping to think independently, avoid repeating the assumptions made by others (at least consciously) and perhaps even rediscover or create something genuinely new. As usual, no warranty is provided. You use this code at your own risk.
 
+As a result of the training process, you should see the following figure:
+
+<p align="center">
+  <img src="training_accuracy.png" width="500">
+</p>
+
+The training process is relatively slow because the learning rate `lr = 0.001` was deliberately chosen to be a small number, which enabled the network to adjust to ternarisation. Yet, after 1500 epochs, it is noteworthy that the training accuracy is approximately 99.2%. While increasing the number of training epocs will improve this result, I established that reaching 100% might not improve the performance of the trained network due to ternarisation.  
+
 Tested on `800 x 10` images from the MNIST testing subdataset, the result should look like this (I used Octave 9.4.0):
 
 <p align="center">

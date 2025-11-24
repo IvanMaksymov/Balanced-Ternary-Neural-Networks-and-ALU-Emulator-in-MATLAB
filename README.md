@@ -23,7 +23,7 @@ As a result of the training process, you should see the following figure:
   <img src="training_accuracy.png" width="500">
 </p>
 
-The training process is relatively slow because the learning rate `lr = 0.001` was deliberately chosen to be a small number, which enabled the network to adjust to ternarisation. Yet, after 1500 epochs, it is noteworthy that the training accuracy is approximately 99.2%. While increasing the number of training epocs will improve this result, I established that reaching 100% might not improve the performance of the trained network due to ternarisation.  
+The training process is relatively slow because the learning rate `lr = 0.001` was deliberately chosen to be a small number, which enabled the network to adjust to ternarisation. Yet, after 1500 epochs, it is noteworthy that the training accuracy is approximately 99.2%. While increasing the number of training epochs will improve this result, I established that reaching 100% might not improve the performance of the trained network due to ternarisation.  
 
 Tested on `800 x 10` images from the MNIST testing subdataset, the result should look like this (I used Octave 9.4.0):
 

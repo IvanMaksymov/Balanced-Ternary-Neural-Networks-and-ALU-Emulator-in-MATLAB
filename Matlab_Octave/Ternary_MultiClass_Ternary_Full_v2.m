@@ -71,9 +71,9 @@ end
 figure; plot(1:epochs, accuracy,'LineWidth',2);
 xlabel('Epoch'); ylabel('Accuracy'); title('Training Accuracy'); grid on;
 
-%% =======================
-% 5. Inference on test set
-%% =======================
+%% ===========================================================================================
+% 5. Inference on test set -- see Ternary_MultiClass_Ternary_Inference_Only.m for more detail
+%% ===========================================================================================
 % Forward pass (fully ternary)
 tW1 = ternarize(W1, tf);
 tW2 = ternarize(W2, tf);

@@ -74,6 +74,11 @@ xlabel('Epoch'); ylabel('Accuracy'); title('Training Accuracy'); grid on;
 %% =======================
 % 5. Inference on test set
 %% =======================
+% Forward pass (fully ternary)
+tW1 = ternarize(W1, tf);
+tW2 = ternarize(W2, tf);
+tW3 = ternarize(W3, tf);
+
 acc_test = 0;
 
 for tst_k = 1:N_test
@@ -83,16 +88,17 @@ for tst_k = 1:N_test
 
         x = reshape(X_tst(:,:, (tst_k-1)*10 + k), input_size,1);
 
-        % Forward pass (fully ternary)
-        tW1 = ternarize(W1, tf);
-        tW2 = ternarize(W2, tf);
-        tW3 = ternarize(W3, tf);
+%        v1 = tW1*x; y1 = ternaryActivation(ternarize(v1, tf), tf);
+%        v2 = tW2*y1; y2 = ternaryActivation(ternarize(v2, tf), tf);
+%        v3 = tW3*y2;
 
-        v1 = tW1*x; y1 = ternaryActivation(ternarize(v1, tf), tf);
-        v2 = tW2*y1; y2 = ternaryActivation(ternarize(v2, tf), tf);
+        v1 = tW1*x; y1 = sign(v1);
+        v2 = tW2*y1; y2 = sign(v2);
         v3 = tW3*y2;
 
         %y3 = ternaryActivation(ternarize(v3, tf), tf);
+        % applying 'sign' decreses the accuracy from 0.9546 to 0.9395
+        %y3 = sign(v3);  % linear output = SVM decision function values (no softmax — decision based on score)
         %y3 = Softmax(v3); % output layer using Softmax
         y3 = v3;  % linear output = SVM decision function values (no softmax — decision based on score)
 

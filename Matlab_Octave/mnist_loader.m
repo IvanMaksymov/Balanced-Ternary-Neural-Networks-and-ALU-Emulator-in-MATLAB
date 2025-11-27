@@ -74,8 +74,8 @@ if flag == 0
       end
   end
 
-  X_new = ternarize_bernoulli(X_new);
-  X_tst = ternarize_bernoulli(X_new_tst);
+  X_new = ternarize(X_new);
+  X_tst = ternarize(X_new_tst);
 
   save -v7 train_ternary.dat X_new
   save -v7 test_ternary.dat X_tst
